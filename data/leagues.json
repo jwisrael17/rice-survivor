@@ -1,0 +1,25 @@
+{
+  "leagues": [
+    {
+      "id": "73d3be66-b273-4592-8b30-9b938a1c3df1",
+      "code": "DC5Y85",
+      "name": "Test 1`",
+      "ownerName": "John Israel",
+      "status": "Preseason",
+      "createdAt": "2026-09-12T01:32:33.986Z",
+      "pin": {
+        "salt": "c72f177c22294f71cd513f8be3c4f430",
+        "hash": "e8ac35e788e81cf355b257564a8e532ea1df674f1e8824570be823630482a6f7"
+      },
+      "members": [
+        {
+          "id": "1cc6aafd-f716-467c-a6bc-505cb5ca895e",
+          "teamName": "test",
+          "playerName": "John",
+          "points": 0,
+          "joinedAt": "2026-09-12T01:36:16.110Z"
+        }
+      ]
+    }
+  ]
+}

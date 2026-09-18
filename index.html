@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The unofficial fantasy companion for Rice University Survivor: Second Course." />
+  <title>Rice Survivor — Second Course</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="site-logo" href="#top" aria-label="Rice Survivor home">
+      <img src="assets/rice-survivor-logo.png" alt="Rice University Survivor — Outwit, Outplay, Outlast" />
+    </a>
+    <button class="menu-button" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#game">The Game</a>
+      <a href="#cast">Castaways</a>
+      <a href="#scoring">Scoring</a>
+      <a href="#standings">Standings</a>
+      <button class="button button-small open-join-league">Join a league <span>↗</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-shade"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow"><span></span> An unofficial Rice University game</p>
+        <h1>SECOND<br><em>COURSE</em></h1>
+        <p class="hero-deck">Eighteen Owls. One campus. Every vote changes the game.</p>
+        <div class="hero-actions">
+          <button class="button open-create-league">Build your league <span>↗</span></button>
+          <a class="text-link" href="#game">See how it works <span>↓</span></a>
+        </div>
+      </div>
+      <div class="season-stamp" aria-label="Season two">
+        <span>RICE SURVIVOR</span><strong>02</strong><small>HOUSTON, TX</small>
+      </div>
+      <div class="ticker" aria-label="Game summary">
+        <span>18 CASTAWAYS</span><i>◆</i><span>2 TRIBES</span><i>◆</i><span>1 SOLE SURVIVOR</span><i>◆</i><span>YOUR BRAGGING RIGHTS</span>
+      </div>
+    </section>
+
+    <section class="intro section" id="game">
+      <div class="section-number">01 / THE GAME</div>
+      <div class="intro-copy reveal">
+        <h2>WATCH THE GAME.<br><span>PLAY YOUR OWN.</span></h2>
+        <p>Draft the players you believe in, call each episode's vote, and climb the leaderboard as the season unfolds across campus.</p>
+      </div>
+      <div class="steps">
+        <article class="step reveal">
+          <span class="step-index">01</span><div class="step-symbol">⌁</div>
+          <h3>MAKE YOUR PICKS</h3><p>Choose a winner pick and draft a roster of castaways before the game begins.</p>
+        </article>
+        <article class="step reveal">
+          <span class="step-index">02</span><div class="step-symbol">✦</div>
+          <h3>CALL THE VOTE</h3><p>Lock in who you think will be sent home before each tribal council.</p>
+        </article>
+        <article class="step reveal">
+          <span class="step-index">03</span><div class="step-symbol">↗</div>
+          <h3>CLIMB THE BOARD</h3><p>Score for challenge wins, correct predictions, idols, and making the merge.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cast-section section" id="cast">
+      <div class="cast-heading reveal">
+        <div><div class="section-number light">02 / MEET THE CAST</div><h2>18 OWLS.<br><span>ZERO EASY VOTES.</span></h2></div>
+        <p>Season two brings together students from every corner of campus. Names, colleges, majors, photos, and bios all live in one editable data file.</p>
+      </div>
+      <div class="cast-toolbar">
+        <div class="filter-set" role="group" aria-label="Filter castaways">
+          <button class="filter active" data-filter="all">All 18</button>
+          <button class="filter" data-filter="blue">Blue tribe</button>
+          <button class="filter" data-filter="gold">Gold tribe</button>
+        </div>
+        <span>SELECT A PLAYER TO VIEW PROFILE ↗</span>
+      </div>
+      <div class="cast-grid" id="cast-grid"></div>
+    </section>
+
+    <section class="scoring section" id="scoring">
+      <div class="section-number">03 / SCORING</div>
+      <div class="scoring-layout">
+        <div class="scoring-title reveal"><p class="eyebrow dark"><span></span> Every move matters</p><h2>POINTS ON<br><em>THE BOARD</em></h2></div>
+        <div class="score-list reveal">
+          <div><span>Correct weekly boot</span><strong>+3</strong></div>
+          <div><span>Individual immunity</span><strong>+4</strong></div>
+          <div><span>Hidden advantage found</span><strong>+2</strong></div>
+          <div><span>Survive tribal council</span><strong>+1</strong></div>
+          <div><span>Make the merge</span><strong>+5</strong></div>
+          <div class="accent"><span>Pick the Sole Survivor</span><strong>+15</strong></div>
+        </div>
+      </div>
+      <p class="rules-note">Scoring values are starter placeholders—adjust them in <code>index.html</code> to fit your league.</p>
+    </section>
+
+    <section class="standings section" id="standings">
+      <div class="standings-card reveal">
+        <div>
+          <div class="section-number light">04 / LEAGUE TABLE</div>
+          <p class="status"><span></span> Preseason</p>
+          <h2>THE BOARD IS<br>WIDE OPEN.</h2>
+          <p>Create a private league, send the code to your people, and settle the smartest table at Rice.</p>
+          <button class="button open-create-league">Start a league <span>↗</span></button>
+        </div>
+        <div class="mini-board" aria-label="Preview standings">
+          <div class="board-head"><span>RANK / TEAM</span><span>PTS</span></div>
+          <div><b>01</b><span>Sammy's Schemers</span><strong>—</strong></div>
+          <div><b>02</b><span>Fondren Final Four</span><strong>—</strong></div>
+          <div><b>03</b><span>North Lot Nomads</span><strong>—</strong></div>
+          <div><b>04</b><span>Your team here</span><strong>—</strong></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="site-logo footer-logo" href="#top"><img src="assets/rice-survivor-logo.png" alt="Rice University Survivor" /></a>
+    <div><p>Season 02 · Second Course</p><p>Made for the Rice Survivor community.</p></div>
+    <p class="disclaimer">A fan-created fantasy companion. Not affiliated with Rice University, CBS, or the official Survivor franchise.</p>
+  </footer>
+
+  <dialog class="modal" id="player-modal">
+    <button class="modal-close" aria-label="Close player profile">×</button>
+    <div id="player-modal-content"></div>
+  </dialog>
+
+  <dialog class="modal join-modal" id="create-modal">
+    <button class="modal-close" aria-label="Close">×</button>
+    <div class="join-content">
+      <p class="eyebrow dark"><span></span> Season 02</p>
+      <h2>READY TO PLAY?</h2>
+      <p>Create a private league and get a shareable six-character invite code. Your admin PIN lets you manage scores.</p>
+      <form id="join-form">
+        <label for="league-name">League name</label>
+        <input id="league-name" placeholder="e.g. Lovett Legends" required maxlength="32" />
+        <label for="owner-name">Your name</label>
+        <input id="owner-name" placeholder="League commissioner" required maxlength="32" />
+        <label for="admin-pin">Admin PIN</label>
+        <input id="admin-pin" type="password" inputmode="numeric" pattern="[0-9]{4,8}" placeholder="4–8 digits" required />
+        <button class="button" type="submit">Create league <span>↗</span></button>
+      </form>
+      <p class="success-message" role="status"></p>
+    </div>
+  </dialog>
+
+  <dialog class="modal join-modal" id="join-league-modal">
+    <button class="modal-close" aria-label="Close">×</button>
+    <div class="join-content">
+      <p class="eyebrow dark"><span></span> Enter the game</p>
+      <h2>JOIN A LEAGUE</h2>
+      <p>Use the six-character invite code from your league commissioner, then choose your fantasy team name.</p>
+      <form id="join-league-form">
+        <label for="invite-code">Invite code</label>
+        <input id="invite-code" autocomplete="off" autocapitalize="characters" maxlength="6" placeholder="ABC123" required />
+        <label for="join-player-name">Your name</label>
+        <input id="join-player-name" maxlength="32" placeholder="First and last name" required />
+        <label for="join-team-name">Fantasy team name</label>
+        <input id="join-team-name" maxlength="32" placeholder="e.g. Fondren Final Four" required />
+        <button class="button" type="submit">Join league <span>↗</span></button>
+      </form>
+      <p class="join-league-message" role="status"></p>
+      <button class="switch-flow" type="button">Need to create a league instead? →</button>
+    </div>
+  </dialog>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

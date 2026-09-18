@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>League · Rice Survivor</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head>
+<body class="dashboard-body"><header class="dash-nav"><a class="site-logo" href="/" aria-label="Rice Survivor home"><img src="assets/rice-survivor-logo.png" alt="Rice University Survivor"></a><a class="dash-link" href="/">← Season home</a></header>
+<main class="dashboard-shell">
+  <section class="dash-hero"><p class="eyebrow"><span></span> Private fantasy league</p><h1 id="league-title">Loading league…</h1><div class="invite-block"><span>INVITE CODE</span><button id="copy-code" title="Copy invite code"><strong id="league-code">——</strong> ⧉</button></div></section>
+  <div id="league-error" class="dash-error"></div>
+  <section class="dash-grid" id="league-content" hidden>
+    <div><div class="dash-section-title"><span>LIVE STANDINGS</span><small id="league-status">PRESEASON</small></div><div class="leaderboard" id="leaderboard"></div></div>
+    <aside class="join-panel"><p class="section-number">JOIN THIS LEAGUE</p><h2>Claim your spot.</h2><form id="member-form"><label>Your name</label><input id="player-name" required maxlength="32" placeholder="First and last name"><label>Fantasy team name</label><input id="team-name" required maxlength="32" placeholder="e.g. Fondren Final Four"><button class="button" type="submit">Join league <span>↗</span></button></form><p id="member-message" role="status"></p><a id="admin-link" class="admin-link" href="#">League commissioner? Open admin →</a></aside>
+  </section>
+</main><script type="module" src="league.js"></script></body></html>
