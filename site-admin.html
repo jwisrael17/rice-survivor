@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Game Administration · Rice Survivor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260918-3">
+</head>
+<body class="dashboard-body admin-body">
+  <header class="dash-nav"><a class="site-logo" href="/" aria-label="Rice Survivor home"><img src="assets/rice-survivor-logo.png" alt="Rice University Survivor"></a><a class="dash-link" href="/">← Season home</a></header>
+  <main class="admin-shell site-admin-shell">
+    <section class="login-card" id="site-admin-login">
+      <p class="eyebrow dark"><span></span> Private access</p>
+      <h1>Game administration</h1>
+      <p id="admin-auth-copy">Sign in with Google, then enter the game administration PIN.</p>
+      <button class="button" id="site-admin-google">Continue with Google <span>↗</span></button>
+      <form id="site-admin-pin-form" hidden>
+        <label for="site-admin-pin">Four-digit PIN</label>
+        <input id="site-admin-pin" type="password" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" autocomplete="one-time-code" required>
+        <button class="button" type="submit">Unlock dashboard <span>↗</span></button>
+      </form>
+      <p id="site-admin-message" role="status"></p>
+    </section>
+
+    <section id="site-admin-dashboard" hidden>
+      <div class="admin-heading"><div><p class="eyebrow dark"><span></span> Site-wide dashboard</p><h1>Season control</h1></div><button class="button button-small" id="refresh-admin">Refresh</button></div>
+      <p class="admin-note">This session automatically expires after one hour.</p>
+
+      <section class="commissioner-section">
+        <div class="commissioner-section-heading"><div><p class="section-number">TRIBAL COUNCIL</p><h2>Record a result</h2></div><p>Submitting an existing tribal number updates that result.</p></div>
+        <form id="tribal-result-form" class="tribal-result-form">
+          <label>Tribal number<input name="tribalNumber" type="number" min="1" max="99" required></label>
+          <label>Voted out<select name="votedOutId" required></select></label>
+          <label>Individual immunity winner<select name="immunityWinnerId"></select></label>
+          <label>Advantage found by<select name="advantageFinderId"></select></label>
+          <label>Sole Survivor<select name="soleSurvivorId"></select></label>
+          <label class="check-label"><input name="mergeReached" type="checkbox"> The merge was reached at this tribal</label>
+          <label class="full-field">Notes<textarea name="notes" rows="3" maxlength="500" placeholder="Optional public recap"></textarea></label>
+          <button class="button" type="submit">Save tribal result <span>↗</span></button>
+          <p id="tribal-message" role="status"></p>
+        </form>
+        <div id="tribal-results-admin" class="tribal-results-admin"></div>
+      </section>
+
+      <section class="commissioner-section">
+        <div class="commissioner-section-heading"><div><p class="section-number">LEAGUES</p><h2>All leagues</h2></div><p id="league-count">Loading…</p></div>
+        <div id="all-leagues" class="all-leagues"></div>
+      </section>
+    </section>
+  </main>
+  <script type="module" src="site-admin.js?v=20260918-3"></script>
+</body>
+</html>

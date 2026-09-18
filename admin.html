@@ -1,5 +1,49 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>League Admin · Rice Survivor</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head>
-<body class="dashboard-body admin-body"><header class="dash-nav"><a class="site-logo" href="/" aria-label="Rice Survivor home"><img src="assets/rice-survivor-logo.png" alt="Rice University Survivor"></a><a class="dash-link" id="back-link" href="/">← Back to league</a></header>
-<main class="admin-shell"><section id="login-card" class="login-card"><p class="eyebrow dark"><span></span> Commissioner access</p><h1>League admin</h1><p>Enter the PIN you chose when this league was created.</p><form id="admin-login"><label>League code</label><input id="login-code" required maxlength="6"><label>Admin PIN</label><input id="login-pin" type="password" inputmode="numeric" required><button class="button">Open dashboard <span>↗</span></button></form><p id="login-message" role="status"></p></section>
-<section id="admin-dashboard" hidden><div class="admin-heading"><div><p class="eyebrow dark"><span></span> Commissioner dashboard</p><h1 id="admin-title"></h1></div><label>Season status<select id="status-select"><option>Preseason</option><option>In progress</option><option>Merge</option><option>Finale</option><option>Complete</option></select></label></div><div class="admin-note">Score changes are saved immediately to <code>data/leagues.json</code>.</div><div class="admin-table" id="admin-table"></div></section>
-</main><script type="module" src="admin.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Commissioner Dashboard · Rice Survivor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260918-3">
+</head>
+<body class="dashboard-body admin-body">
+  <header class="dash-nav"><a class="site-logo" href="/" aria-label="Rice Survivor home"><img src="assets/rice-survivor-logo.png" alt="Rice University Survivor"></a><a class="dash-link" id="back-link" href="/">← Back to league</a></header>
+  <main class="admin-shell">
+    <section id="login-card" class="login-card">
+      <p class="eyebrow dark"><span></span> Commissioner access</p>
+      <h1>League settings</h1>
+      <p>Sign in with the Google account that created this league.</p>
+      <button class="button" id="admin-login">Continue with Google <span>↗</span></button>
+      <p id="login-message" role="status"></p>
+    </section>
+    <section id="admin-dashboard" hidden>
+      <div class="admin-heading">
+        <div><p class="eyebrow dark"><span></span> Commissioner dashboard</p><h1 id="admin-title"></h1></div>
+        <label>Season status<select id="status-select"><option>Preseason</option><option>In progress</option><option>Merge</option><option>Finale</option><option>Complete</option></select></label>
+      </div>
+      <p class="admin-note">Updates appear instantly for everyone in your league.</p>
+      <section class="commissioner-section">
+        <div class="commissioner-section-heading"><div><p class="section-number">SCORING SETTINGS</p><h2>Point values</h2></div><p>Set how many points each event is worth.</p></div>
+        <form id="scoring-rules-form" class="scoring-fields admin-scoring-fields">
+          <label>Correct weekly boot<input name="correctBoot" type="number" min="0" max="100" required></label>
+          <label>Individual immunity<input name="individualImmunity" type="number" min="0" max="100" required></label>
+          <label>Hidden advantage found<input name="advantageFound" type="number" min="0" max="100" required></label>
+          <label>Survive tribal council<input name="surviveTribal" type="number" min="0" max="100" required></label>
+          <label>Make the merge<input name="makeMerge" type="number" min="0" max="100" required></label>
+          <label>Pick the Sole Survivor<input name="soleSurvivor" type="number" min="0" max="100" required></label>
+          <button class="button" type="submit">Save point values <span>↗</span></button>
+          <p id="scoring-message" role="status"></p>
+        </form>
+      </section>
+      <section class="commissioner-section">
+        <div class="commissioner-section-heading"><div><p class="section-number">LEADERBOARD</p><h2>Team totals</h2></div><p>Enter an exact total or use the quick adjustment buttons.</p></div>
+        <div class="admin-table" id="admin-table"></div>
+      </section>
+    </section>
+  </main>
+  <script type="module" src="admin.js?v=20260918-3"></script>
+</body>
+</html>

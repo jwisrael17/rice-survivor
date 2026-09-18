@@ -2,6 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/fireba
 import { getAnalytics, isSupported as analyticsIsSupported } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-analytics.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
 import { getAuth } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+import { getFunctions } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-functions.js";
 
 // Firebase web configuration is intentionally public. Access to data is
 // protected by Firebase Authentication and Firestore security rules.
@@ -18,6 +19,7 @@ export const firebaseConfig = {
 export const firebaseApp = initializeApp(firebaseConfig);
 export const db = getFirestore(firebaseApp);
 export const auth = getAuth(firebaseApp);
+export const functions = getFunctions(firebaseApp);
 
 // Analytics is unavailable in a few browser/privacy environments, so it is
 // initialized defensively and never blocks the game itself.

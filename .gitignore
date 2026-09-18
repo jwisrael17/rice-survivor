@@ -1,0 +1,8 @@
+.firebase/
+.DS_Store
+.Rhistory
+data/leagues.json
+functions/node_modules/
+functions/.secret.local
+firebase-debug.log
+*-debug.log

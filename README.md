@@ -1,29 +1,47 @@
 # Rice Survivor — Second Course
 
-A responsive, standalone front-end for a fan-created Rice University Survivor fantasy game.
+A Firebase-hosted fantasy companion for the fan-created Rice University Survivor game.
 
 ## Run locally
-
-From this folder:
 
 ```bash
 node server.js
 ```
 
-Then visit `http://localhost:4173`.
+Visit `http://localhost:4173`. Google authentication should be tested in a normal Safari or Chrome window rather than an embedded preview browser.
 
-## Add the real cast
+## Contestants
 
-Edit the `players` array at the top of `app.js`. The cast grid, filters, and profile modals are all rendered from those 18 objects. You can later add an `image` field and replace the numbered `.portrait` placeholder with an `<img>` element.
+The 18 castaway records are in `contestants.js`. Portraits should be placed in `assets/contestants`. See `CONTESTANTS.md` for the exact format and an example.
 
-The scoring values live in `index.html`.
+## Administration
 
-## Backend and admin
+- `/admin.html?code=ABC123` is a league-specific commissioner dashboard. The league's creator can update scoring rules, season status, and team totals.
+- `/site-admin.html` is the PIN-protected, site-wide dashboard. It shows every league and records official tribal results.
 
-The zero-dependency Node server persists leagues to `data/leagues.json` and exposes JSON endpoints under `/api`. Creating a league returns a six-character invite code. Open `/league.html?code=ABC123` for the public dashboard and `/admin.html?code=ABC123` for the PIN-protected commissioner dashboard.
+The site-wide PIN is verified by the `unlockSiteAdmin` Cloud Function. Successful verification creates a one-hour server-issued session. Firestore rules require that active session for all tribal-result writes.
 
-This local data store is intended for development. Before publishing publicly, move the data layer to Firebase or another hosted database and add full member authentication.
+## Deploy
 
-## Firebase SDK
+Install the function dependencies once:
 
-`firebase-config.js` initializes the registered `rice-survivor` web app with Analytics, Cloud Firestore, and Firebase Authentication. The configuration object is public by design; protect Firestore with Authentication and security rules. The existing league API still uses the local Node backend until its collections and authorization rules are migrated to Firestore.
+```bash
+cd functions
+npm install
+cd ..
+```
+
+Sign in and save the administration PIN in Firebase Secret Manager:
+
+```bash
+firebase login
+firebase functions:secrets:set ADMIN_PIN
+```
+
+Enter `6767` when prompted. Then deploy:
+
+```bash
+firebase deploy --only functions,firestore:rules,hosting
+```
+
+Cloud Functions deployment may require the Firebase project to use the Blaze billing plan.
