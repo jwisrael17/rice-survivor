@@ -1,6 +1,6 @@
 export const contestants = [
   { id: 1, name: "Emma P", photo: "assets/contestants/Emma.png", college: "Chao", year: "Junior", major: "TBA", bio: "Profile coming soon." },
-  { id: 2, name: "Carolina", photo: "assets/contestants/Carolina.png", college: "TBA", year: "TBA", major: "TBA", bio: "Profile coming soon." },
+  { id: 2, name: "Carolina B", photo: "assets/contestants/Carolina.png", college: "TBA", year: "TBA", major: "TBA", bio: "Profile coming soon." },
   { id: 3, name: "Castaway 03", photo: "", college: "TBA", year: "TBA", major: "TBA", bio: "Profile coming soon." },
   { id: 4, name: "Castaway 04", photo: "", college: "TBA", year: "TBA", major: "TBA", bio: "Profile coming soon." },
   { id: 5, name: "Castaway 05", photo: "", college: "TBA", year: "TBA", major: "TBA", bio: "Profile coming soon." },
