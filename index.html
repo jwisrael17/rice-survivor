@@ -87,11 +87,16 @@
         <div class="scoring-title reveal"><p class="eyebrow dark"><span></span> Every move matters</p><h2>POINTS ON<br><em>THE BOARD</em></h2></div>
         <div class="score-list reveal">
           <div><span>Correct weekly boot</span><strong>+3</strong></div>
-          <div><span>Individual immunity</span><strong>+4</strong></div>
-          <div><span>Hidden advantage found</span><strong>+2</strong></div>
-          <div><span>Survive tribal council</span><strong>+1</strong></div>
-          <div><span>Make the merge</span><strong>+5</strong></div>
-          <div class="accent"><span>Pick the Sole Survivor</span><strong>+15</strong></div>
+          <div><span>Individual immunity</span><strong>+3</strong></div>
+          <div><span>Tribal immunity</span><strong>+2</strong></div>
+          <div><span>Win firemaking</span><strong>+3</strong></div>
+          <div><span>Go on journey</span><strong>+2</strong></div>
+          <div><span>Gain idol or advantage</span><strong>+2</strong></div>
+          <div><span>Successfully play idol or advantage</span><strong>+2</strong></div>
+          <div><span>Survive round of voting</span><strong>+1</strong></div>
+          <div><span>Vote correctly or be in correct split vote</span><strong>+2</strong></div>
+          <div><span>Make the merge</span><strong>+3</strong></div>
+          <div class="accent"><span>Pick the Sole Survivor</span><strong>+12</strong></div>
         </div>
       </div>
       <p class="rules-note">Every commissioner can customize these values when creating a league.</p>
@@ -142,11 +147,16 @@
           <legend>Choose your point values</legend>
           <p>You can update these later from the commissioner dashboard.</p>
           <label for="score-correct-boot">Correct weekly boot<input id="score-correct-boot" name="correctBoot" type="number" min="0" max="100" value="3" required /></label>
-          <label for="score-immunity">Individual immunity<input id="score-immunity" name="individualImmunity" type="number" min="0" max="100" value="4" required /></label>
-          <label for="score-advantage">Hidden advantage found<input id="score-advantage" name="advantageFound" type="number" min="0" max="100" value="2" required /></label>
-          <label for="score-survive">Survive tribal council<input id="score-survive" name="surviveTribal" type="number" min="0" max="100" value="1" required /></label>
-          <label for="score-merge">Make the merge<input id="score-merge" name="makeMerge" type="number" min="0" max="100" value="5" required /></label>
-          <label for="score-winner">Pick the Sole Survivor<input id="score-winner" name="soleSurvivor" type="number" min="0" max="100" value="15" required /></label>
+          <label for="score-individual-immunity">Individual immunity<input id="score-individual-immunity" name="indivImmunity" type="number" min="0" max="100" value="3" required /></label>
+          <label for="score-tribal-immunity">Tribal immunity<input id="score-tribal-immunity" name="tribeImmunity" type="number" min="0" max="100" value="2" required /></label>
+          <label for="score-firemaking">Win firemaking<input id="score-firemaking" name="firemaking" type="number" min="0" max="100" value="3" required /></label>
+          <label for="score-journey">Go on journey<input id="score-journey" name="journey" type="number" min="0" max="100" value="2" required /></label>
+          <label for="score-idol-advantage">Gain idol or advantage<input id="score-idol-advantage" name="idolAdvantage" type="number" min="0" max="100" value="2" required /></label>
+          <label for="score-idol-advantage-success">Successfully play idol or advantage<input id="score-idol-advantage-success" name="idolAdvantageSuccess" type="number" min="0" max="100" value="3" required /></label>
+          <label for="score-survive-round">Survive round of voting<input id="score-survive-round" name="surviveRound" type="number" min="0" max="100" value="1" required /></label>
+          <label for="score-correct-vote">Vote correctly<input id="score-correct-vote" name="correctVote" type="number" min="0" max="100" value="1" required /></label>
+          <label for="score-merge">Make the merge<input id="score-merge" name="makeMerge" type="number" min="0" max="100" value="3" required /></label>
+          <label for="score-winner">Pick the Sole Survivor<input id="score-winner" name="soleSurvivor" type="number" min="0" max="100" value="12" required /></label>
         </fieldset>
         <button class="button" type="submit">Create league <span>↗</span></button>
       </form>
