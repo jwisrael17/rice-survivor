@@ -12,9 +12,14 @@ let leagueData = null;
 const escapeHtml = (value) => String(value).replace(/[&<>'"]/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" }[char]));
 const scoringLabels = {
   correctBoot: "Correct weekly boot",
-  individualImmunity: "Individual immunity",
-  advantageFound: "Hidden advantage found",
-  surviveTribal: "Survive tribal council",
+  indivImmunity: "Individual immunity",
+  tribeImmunity: "Tribal immunity",
+  firemakingWin: "Win firemaking
+  journeyTrip: "Go on journey",
+  idolAdvantage: "Gain an idol or advantage",
+  idolAdvantageSuccess: "Successfully play idol or advantage",
+  surviveRound: "Survive a round of voting",
+  correctVote: "Vote correctly for boot"
   makeMerge: "Make the merge",
   soleSurvivor: "Pick the Sole Survivor",
 };
