@@ -17,6 +17,7 @@ const scoringLabels = {
   firemakingWin: "Win firemaking
   journeyTrip: "Go on journey",
   idolAdvantage: "Gain an idol or advantage",
+  idolAdvantagePlay: "Play an idol or advantage",
   idolAdvantageSuccess: "Successfully play idol or advantage",
   surviveRound: "Survive a round of voting",
   correctVote: "Vote correctly for boot"
